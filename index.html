@@ -13,6 +13,24 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
+
+
+    <script>
+        function openEmail() {
+          var recipient = "zahidhasansumon10@gmail.com"; // Replace with the recipient's email address
+          var subject = document.getElementById('subject').value;
+          var body = document.getElementById('message').value;
+
+        //    var name = document.getElementById('name').value;
+        //    var email = document.getElementById('email').value;
+    
+          var mailtoLink = "mailto:" + recipient +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+    
+          window.location.href = mailtoLink;
+        }
+      </script>
     
     
 
@@ -211,7 +229,7 @@
                     <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
-                    <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
+                    <button class="btn btn-lg my-font btn-light rounded" onclick="openEmail()">Hire Me</button>
                 </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -285,7 +303,7 @@
                             placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Email" class="btn btn-outline-primary rounded">
+                        <input onclick="openEmail()" type="submit" value="Send Email" class="btn btn-outline-primary rounded">
                     </div>
                 </div>
             </form>
