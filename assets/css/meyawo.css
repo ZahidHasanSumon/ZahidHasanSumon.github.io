@@ -11195,12 +11195,29 @@ p {
 
 .portfolio-card .portfolio-card-img {
   width: 100%;
+  height: 250px;
 }
 .portfolio-card-img1 {
   width: 100%;
   height: 570px;
   margin-bottom: 20px;
 }
+
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 600px) {
+    .portfolio-card-img1 {
+      width: 100%;
+      height: 900px;
+      
+      margin-bottom: 20px;
+    }
+
+    .portfolio-card .portfolio-card-img {
+      width: 100%;
+      height: 300px;
+    }
+   
+  }
 
 .portfolio-card .portfolio-card-overlay {
   position: absolute;
@@ -12176,14 +12193,15 @@ pre .code {
 }
 
 .about-img-holder {
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 200px;
+  max-width: 300px;
   margin-right: 20px;
 }
 
 .about-img-holder .about-img {
-  width: 100%;
+  width: 200px;
   margin-bottom: 15px;
+  height: 200px;
 }
 
 .about-caption {
@@ -12214,6 +12232,8 @@ pre .code {
 /* sections */
 .section {
   padding: 70px 10px;
+  text-align: center;
+  
 }
 
 .section .section-title {
