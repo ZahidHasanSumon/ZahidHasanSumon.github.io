@@ -20,6 +20,7 @@
           var recipient = "zahidhasansumon10@gmail.com"; // Replace with the recipient's email address
           var subject = document.getElementById('subject').value;
           var body = document.getElementById('message').value;
+          var emailPageURL = 'success.html'; 
 
         //    var name = document.getElementById('name').value;
         //    var email = document.getElementById('email').value;
@@ -28,7 +29,9 @@
             "?subject=" + encodeURIComponent(subject) +
             "&body=" + encodeURIComponent(body);
     
-          window.location.href = mailtoLink;
+         // window.location.href = mailtoLink;
+          window.open(mailtoLink, '_blank');
+          window.location.href = emailPageURL;
         }
       </script>
     
@@ -277,8 +280,8 @@
             <h6 class="section-title mb-5">Contact Me</h6>
             
             <!-- contact form -->
-            <form action="success.html" method="post" class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
+            <!-- <form action="success.html" method="post" class="contact-form col-md-10 col-lg-8 m-auto"> -->
+                <div class="form-row" class="contact-form col-md-10 col-lg-8 m-auto">
                     <div class="form-group col-sm-6">
                         <input type="text" id="name" name="name" size="50" class="form-control" placeholder="Your Name" required>
                     </div>
@@ -296,7 +299,7 @@
                         <input onclick="openEmail()" type="submit" value="Send Email" class="btn btn-outline-primary rounded">
                     </div>
                 </div>
-            </form>
+            <!-- </form> -->
             <!-- end of contact form -->
 
         </div><!-- end of container -->
